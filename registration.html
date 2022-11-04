@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration page</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body style="background-image: none; background-color: #00b894">
+    <style>
+        .first {
+            border: 2px solid black;
+            width: 30%;
+            text-align: center;
+            padding: 8px;
+            border-radius: 10px;
+        }
+        
+        .first select {
+            border-radius: 5px;
+            padding: 6px;
+        }
+    </style>
+    <center>
+        <h1 id="headersection">Online Voting system</h1>
+        <hr />
+        <form action="registration.php" method="POST" enctype="multipart/form-data">
+            <h2 id="bodysection">Register</h2>
+            <input name="name" type="text" placeholder="Enter name" />
+            <input name="mobile" type="number" placeholder="Enter mobile number" /><br /><br />
+            <input name="passward" type="password" placeholder="Enter passward" />
+            <input name="cnfpass" type="password" placeholder="Confirm passward" /><br /><br />
+            <input name="addr" style="width: 30%" type="text" placeholder="Address" /><br /><br />
+
+            <div class="first">
+                <label>Upload photo : </label><input name="photo" type="file" placeholder="choose file" /><br /><br />
+            </div>
+            <br />
+
+            <div class="first">
+                <label>Select role : </label>
+                <select name="role">
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
+                </select>
+            </div>
+            <br />
+            <button id="lgnbtn" type="submit">Register</button><br /><br />
+            <label>Already user ?</label><a href="index.html"> Login here</a>
+        </form>
+    </center>
+</body>
+
+</html>
